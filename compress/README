@@ -6,7 +6,7 @@ use the os and sys libraries in order to pull arguments from the cammand line an
 command to produce a compressed file.
 
 USE: compress <name> <target> [type]
-	name 	- The name you want the compressed file to be**
+	name 	- The name you want the compressed file to be, not including the file extention**
 	target 	- The file or directory that you want to compress**
 	type 	- How you want the file to be compressed. If this argument is left empty the 
 		  compressed file will default to the .tar.tbz extention. Otherwise the compressed
