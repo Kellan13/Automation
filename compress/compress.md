@@ -5,6 +5,9 @@ This program is meant to simplify the compression of files using the tar command
 use the os and sys libraries in order to pull arguments from the cammand line and execute a tar 
 command to produce a compressed file.
 
+Added as an alias command by running:
+echo "alias compress='python3 <path to automation directory>/Automation/compress/compress.py'" >> ~/.profile
+
 USE: compress <name> <target> [type]
 	name 	- The name you want the compressed file to be, not including the file extention**
 	target 	- The file or directory that you want to compress**
