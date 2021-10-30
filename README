@@ -13,7 +13,7 @@ compress <name> <target> [type]
 	directory. I do not often remember the tag used to compress files into .tar.tbz, so this 
 	will serve as a substitue for it. Files will be tarred by default into .tar.tbz files, but
 	the user can use [type] to change it
-	<name>	 - the name of the file after it is compressed
+	<name>	 - the name of the file after it is compressed, not including the file extention
 	<target> - the target file or directory to compress
 	[type]	 - where the user specifies what kind of file they want the target to be compressed
 		   into
