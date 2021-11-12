@@ -55,7 +55,6 @@ def main(args):
 
     # Default option
     default = '.tar.tbz '
-    print(args)
 
     # Check to see if the proper amount of arguments have been passed
     if len(args) >= 2:

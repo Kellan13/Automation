@@ -12,7 +12,7 @@ def main(args):
         command_list.append(project + '/doc')
         command_list.append(project + '/feedback')
         command_list.append('echo ".gitignore" >> ' + args[0] + '/.gitignore')
-        command_list.append('touch README.md')
+        command_list.append('touch ' + args[0] + 'README.md')
         result = subprocess.run('; '.join(command_list), capture_output=True, text=True, shell=True)
         return result
 
