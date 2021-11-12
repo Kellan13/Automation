@@ -1,42 +1,45 @@
 Author: Kellan Anderson
 Date: 10/08/21
 
-This project is meant to provide a little bit of automation to the command line on my local
-machine. Each of the directories in Automation/ is meant to hold the program for each improvement. 
-Any future automations will also be kept in this folder. Below is a summation of what each new 
-command will do, and each individual folder has its own README file to explain in more detail, as 
-well as a error.txt folder that will hold and errors the programs have as well as a time stamp of 
-the error
+This project is meant to provide a little bit of automation to the command line on my local machine. Each of the
+directories in Automation/ is meant to hold the program for each improvement. Any future automations will also be kept
+in this folder. Below is a summation of what each new command will do, and each individual folder has its own README
+file to explain in more detail, as well as a error.txt folder that will hold and errors the programs have as well as a
+time stamp of the error
 
 compress <name> <target> [type]
-	This program is meant to run a tar command in order to compress the the target file or 
-	directory. I do not often remember the tag used to compress files into .tar.tbz, so this 
-	will serve as a substitue for it. Files will be tarred by default into .tar.tbz files, but
-	the user can use [type] to change it
-	<name>	 - the name of the file after it is compressed, not including the file extention
-	<target> - the target file or directory to compress
-	[type]	 - where the user specifies what kind of file they want the target to be compressed
-		   into
+	This program is meant to run a tar command in order to compress the the target file or directory. I do not often
+	remember the tag used to compress files into .tar.tbz, so this will serve as a substitute for it. Files will be
+	tarred by default into .tar.tbz files, but the user can use [type] to change it
+    <name>	 - the name of the file after it is compressed, not including the file extension
+    <target> - the target file or directory to compress
+    [type]	 - where the user specifies what kind of file they want the target to be compressed
+               into
 
 project <name>
-	This program will be a command that Iuse to initialize a new project. It will create a 
-	project folder and create and start a readme and .gitignore file
-	<name>	 - The name of the new project
+    This program will be a command that I use to initialize a new project. It will create a project folder and create and
+	start a readme and .gitignore file
+    <name>	 - The name of the new project
 
 uncompress <target>
-	This program will uncompress the target if it has the extention .gz, .tar.gz, .bz2, 
-	.tar.bz2, .tbz, or .tar.tbz
-	<target> - The target to uncompress
+	This program will uncompress the target if it has the extension .gz, .tar.gz, .bz2, .tar.bz2, .tbz, or .tar.tbz
+    <target> - The target to uncompress
 
 upload <target> <object> | upload add <target> | upload remove <target>
-	This program will be used to upload files to a target. This target will either be a
-	shortcut as defined in a target list, or it can be input munually. Files will be uploaded
-	using scp. The upload command will reserve the word "add" and "remove" (they cannot be used
-	in the target or file spots) to be used to add and remove targets from the target list 
-	<target> - The target to upload to that is either on the target list or in the form of
-		   [username]@[hostname]:[file path]
-	<object> - The file or directory to upload
+	This program will be used to upload files to a target. This target will either be a shortcut as defined in a target
+	list, or it can be input manually. Files will be uploaded using scp. The upload command will reserve the word "add"
+	and "remove" (they cannot be used in the target or file spots) to be used to add and remove targets from the target
+	list
+    <target> - The target to upload to that is either on the target list or in the form of
+               [username]@[hostname]:[file path]
+    <object> - The file or directory to upload
 
 Each command will be run as an alias in my .profile file in the home directory. This project is
 meant to be run on a linux machine and the results of running the program may vary from machine
 to machine. The programs will be written in python 3
+
+Date: 11/12/2021
+I restructured the program so that all commands are routed through the main.py file in the Automation/ directory so that
+all commands could make use of the check_error function in the helper_code/shared_functions.py file. Aliases for the
+commands have to be written as:
+'python3 <path to automation folder>/Automation/main.py <command name> <command arguments>'

@@ -81,13 +81,16 @@ def main(args):
 
         # Run the command the command and capture the output
         results = subprocess.run(command, capture_output=True, text=True, shell=True)
-        # Pass stderr to check_error() and print stdout
+
+        # Pass stderr to check_error() and return any errors
         return results
+
     else:
         # If there are not enough arguments passed, print the correct use
         print('Correct use: compress <name> <target> [type]')
 
 
+# Used for testing
 if __name__ == '__main__':
     # main()
     pass

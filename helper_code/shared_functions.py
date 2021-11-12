@@ -18,6 +18,8 @@ def check_error(error):
                 file.write(timestamp + "\n")
                 file.write(error)
                 file.write("\n")
+
+            # Notify the user of an error
             print("Command had an error, please read error file at " + file_loc)
     except TypeError:
         pass
