@@ -1,0 +1,12 @@
+10/31/2021, 00:17:00
+'\\wsl$\Ubuntu\home\kellankda\Apps\Automation\project'
+CMD.EXE was started with the above path as the current directory.
+UNC paths are not supported.  Defaulting to Windows directory.
+Access is denied.
+
+11/08/2021, 09:00:36
+'\\wsl$\Ubuntu\home\kellankda\Apps\Automation\project'
+CMD.EXE was started with the above path as the current directory.
+UNC paths are not supported.  Defaulting to Windows directory.
+Access is denied.
+
