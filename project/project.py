@@ -14,7 +14,7 @@ def main(args):
         command_list.append(project + '/doc')  # mkdir <project name>/doc
         command_list.append(project + '/feedback')  # mkdir <project name>/feedback
         command_list.append('echo ".gitignore" >> ' + args[0] + '/.gitignore')  # put a .gitignore file into the project
-        command_list.append('touch ' + args[0] + 'README.md')  # Create a README file
+        command_list.append('touch ' + args[0] + '/README.md')  # Create a README file
 
         # Run the mkdir commands
         result = subprocess.run('; '.join(command_list), capture_output=True, text=True, shell=True)

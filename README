@@ -17,8 +17,8 @@ compress <name> <target> [type]
                into
 
 project <name>
-    This program will be a command that I use to initialize a new project. It will create a project folder and create and
-	start a readme and .gitignore file
+    This program will be a command that I use to initialize a new project. It will create a project folder and create
+    and start a readme and .gitignore file
     <name>	 - The name of the new project
 
 uncompress <target>
